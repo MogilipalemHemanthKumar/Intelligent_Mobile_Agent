@@ -117,13 +117,13 @@ intelligent_mobile_agent/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-repo/intelligent-mobile-agent.git
-   cd intelligent-mobile-agent
+   git clone https://github.com/MogilipalemHemanthKumar/Intelligent_Mobile_Agent.git
+   cd Intelligent_Mobile_Agent
    ```
 
 2. **Install dependencies**
    ```bash
-   pip install -r updated_requirements.txt
+   pip install -r requirements.txt
    ```
 
 3. **Configure environment**
@@ -164,7 +164,6 @@ print(result)
 | **E-commerce** | `"Search for iPhone 15 on Flipkart and check price"` |
 | **Food Delivery** | `"Order biryani from Zomato for Koramangala delivery"` |
 | **Transportation** | `"Check Ola cab availability to Indiranagar"` |
-| **Shopping** | `"Add Puma shoes size 9 to cart on Amazon"` |
 
 ### Configuration Options
 
@@ -196,7 +195,6 @@ print(result)
 
 | App | Package Name | Features |
 |-----|--------------|----------|
-| **Amazon** | `in.amazon.mShop.android.shopping` | Search, Cart, Filters |
 | **Flipkart** | `com.flipkart.android` | Search, Products, Orders |
 | **Zomato** | `com.application.zomata` | Search, Restaurants, Delivery |
 | **Ola** | `com.olacabs.customer` | Booking, Location, Pricing |
@@ -219,60 +217,4 @@ python intelligent_mobile_agent.py
 agent.execute_task_instruction("Search for headphones under 1000 on Flipkart")
 ```
 
-## 🤝 Contributing
 
-We welcome contributions! Here's how to get started:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes**: Follow our coding standards
-4. **Add tests**: Ensure your changes are tested
-5. **Commit changes**: `git commit -m 'Add amazing feature'`
-6. **Push to branch**: `git push origin feature/amazing-feature`  
-7. **Open a Pull Request**
-
-### Development Setup
-```bash
-# Clone your fork
-git clone https://github.com/MogilipalemHemanthKumar/intelligent-mobile-agent.git
-
-# Install development dependencies
-pip install -r updated_requirements.txt
-
-# Set up pre-commit hooks
-pre-commit install
-```
-
-## 🔒 Security & Privacy
-
-- **API Keys**: Stored in `.env` file (never committed)
-- **Device Data**: Screenshots stored locally, automatically cleaned
-- **Network**: Only communicates with Hugging Face API
-- **Permissions**: Requires only ADB access, no root needed
-
-## 🚧 Limitations & Roadmap
-
-### Current Limitations
-- **Android Only**: iOS support planned for future releases
-- **Network Dependency**: Requires internet for AI vision processing
-- **App-Specific**: Optimized for popular Indian apps
-- **English UI**: Best performance with English interfaces
-
-### Upcoming Features
-- [ ] **iOS Support** via Appium integration
-- [ ] **Offline Mode** with local vision models  
-- [ ] **Multi-Language UI** support
-- [ ] **Custom App Training** capabilities
-- [ ] **Batch Task Processing**
-- [ ] **Performance Analytics Dashboard**
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Hugging Face** for providing the Qwen vision model API
-- **Android Team** for ADB tools and UIAutomator
-- **Open Source Community** for vision-language model research
-- **Contributors** who help improve this project
