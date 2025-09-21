@@ -234,7 +234,7 @@ We welcome contributions! Here's how to get started:
 ### Development Setup
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/intelligent-mobile-agent.git
+git clone https://github.com/MogilipalemHemanthKumar/intelligent-mobile-agent.git
 
 # Install development dependencies
 pip install -r updated_requirements.txt
