@@ -1,5 +1,2 @@
 requests>=2.31.0
 Pillow>=10.0.0
-lxml>=4.9.0
-xmltodict>=0.13.0  
-adb-shell>=0.4.3   
