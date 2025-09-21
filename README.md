@@ -1,4 +1,4 @@
-# �� Intelligent Mobile Agent
+#Intelligent Mobile Agent
 
 > AI-powered mobile automation using computer vision and natural language processing
 
