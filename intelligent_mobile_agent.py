@@ -48,8 +48,6 @@ class IntelligentMobileAgent:
         # Capture UI hierarchy
         ui_hierarchy_captured = self.android_controller.capture_ui_hierarchy(ui_hierarchy_file_path)
         
-        print(f"📱 Step {self.execution_state.current_step_number}: Screenshot: {screenshot_captured}, UI Hierarchy: {ui_hierarchy_captured}")
-        
         return (screenshot_file_path if screenshot_captured else None,
                 ui_hierarchy_file_path if ui_hierarchy_captured else None)
     
