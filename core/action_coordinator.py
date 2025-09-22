@@ -44,8 +44,6 @@ class ActionCoordinator:
                 cleaned_action = line
                 break
 
-        print(f"🎬 Executing action: {cleaned_action}")
-
         # Check for repetitive actions
         coordinate_pattern = re.search(r'TAP\s*\((\d+),\s*(\d+)\)', cleaned_action)
         if coordinate_pattern and self.is_action_repeating(cleaned_action):
