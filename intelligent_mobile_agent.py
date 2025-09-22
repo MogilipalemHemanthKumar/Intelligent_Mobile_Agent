@@ -122,7 +122,6 @@ class IntelligentMobileAgent:
                         best_search_element = search_element_candidates[0]
                         action_to_execute = f"TAP ({best_search_element['center_x']},{best_search_element['center_y']}) # Search: {best_search_element['display_text'] or best_search_element['content_description']}"
                         self.execution_state.search_initiated = True
-                        print(f"🔍 Search element identified: {action_to_execute}")
                 
                 if not action_to_execute:
                     # Generate fallback action from UI elements
@@ -149,9 +148,9 @@ class IntelligentMobileAgent:
                 break
         
         if not final_execution_result:
-            final_execution_result = f"Task execution completed after {self.execution_state.current_step_number} steps. Search initiated: {self.execution_state.search_initiated}, Query entered: {self.execution_state.query_entered}"
+            final_execution_result = f"Task completed in {self.execution_state.current_step_number} steps."
         
-        print(f"\nFinal execution result: {final_execution_result}")
+        print(f"{final_execution_result}")
         print("#" * 60)
         return final_execution_result
 
@@ -160,13 +159,8 @@ def main():
     """Demonstration of intelligent mobile agent capabilities"""
     try:
         mobile_agent = IntelligentMobileAgent()
-        print("Features: Qwen Vision Model + Loop Detection + UI Fallbacks + Modular Architecture")
-        
-        demo_task = "Search for headphones under 1000 on Flipkart"
-        print(f"\nExecuting demo task: {demo_task}")
-        
+        demo_task = "Open Blinkit, find watermelons near me at lower cost"
         execution_result = mobile_agent.execute_task_instruction(demo_task)
-        print(f"\nDemo result: {execution_result}")
         
     except Exception as e:
         print(f"Agent initialization failed: {e}")
