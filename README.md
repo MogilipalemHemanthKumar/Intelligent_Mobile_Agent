@@ -44,7 +44,6 @@ graph TD
     F -->|Primary| G[AI-Suggested Action]
     F -->|Fallback| H[UI Hierarchy Analysis]
     G --> J[Action Execution]
-    H --> J
     J --> K[State Update]
     K --> L{Task Complete?}
     L -->|No| D
