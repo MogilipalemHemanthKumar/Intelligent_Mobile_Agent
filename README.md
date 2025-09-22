@@ -43,7 +43,6 @@ graph TD
     E --> F{Action Decision}
     F -->|Primary| G[AI-Suggested Action]
     F -->|Fallback| H[UI Hierarchy Analysis]
-    F -->|Last Resort| I[Predefined Actions]
     G --> J[Action Execution]
     H --> J
     I --> J
