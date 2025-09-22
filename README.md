@@ -1,6 +1,6 @@
 ## Intelligent Mobile Agent
 
-> AI-powered mobile automation using computer vision and natural language processing
+> AI-powered mobile automation using computer vision (CV)  and natural language processing (NLP)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -25,7 +25,7 @@ Mobile application testing and automation faces several critical challenges:
 
 ## 🚀 Solution Design
 
-The Intelligent Mobile Agent addresses these challenges through an AI-first approach that combines computer vision, natural language processing, and intelligent automation.
+The Intelligent Mobile Agent addresses these challenges through an AI approach that combines computer vision, natural language processing, and intelligent automation.
 
 ### Core Innovation
 ```
@@ -200,21 +200,8 @@ print(result)
 | **Ola** | `com.olacabs.customer` | Booking, Location, Pricing |
 | **Blinkit** | `com.grofers.customerapp` | Grocery, Quick Commerce |
 
-## 🧪 Testing & Validation
 
-### Performance Metrics
-- **Average Task Completion**: 8-12 steps
-- **Success Rate**: ~85% for supported apps  
-- **AI Response Time**: 2-5 seconds per step
-- **Action Execution**: 1-2 seconds per action
 
-### Testing Strategy
-```bash
-# Run demo tasks
-python intelligent_mobile_agent.py
 
-# Test specific scenarios
-agent.execute_task_instruction("Search for headphones under 1000 on Flipkart")
-```
 
 
