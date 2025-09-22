@@ -45,7 +45,6 @@ graph TD
     F -->|Fallback| H[UI Hierarchy Analysis]
     G --> J[Action Execution]
     H --> J
-    I --> J
     J --> K[State Update]
     K --> L{Task Complete?}
     L -->|No| D
