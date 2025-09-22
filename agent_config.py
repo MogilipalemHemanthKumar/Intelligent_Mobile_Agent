@@ -41,9 +41,9 @@ class AgentConfiguration:
         self.target_android_device_id = os.getenv('TARGET_ANDROID_DEVICE_ID', None)
 
         # Agent execution parameters
-        self.maximum_steps = int(os.getenv('MAXIMUM_EXECUTION_STEPS', '15'))
-        self.maximum_action_repetitions = int(os.getenv('MAXIMUM_ACTION_REPETITIONS', '2'))
-        self.screenshot_compression_quality = int(os.getenv('SCREENSHOT_COMPRESSION_QUALITY', '85'))
+        self.maximum_steps = int(os.getenv('MAXIMUM_EXECUTION_STEPS', '20'))
+        self.maximum_action_repetitions = int(os.getenv('MAXIMUM_ACTION_REPETITIONS', '3'))
+        self.screenshot_compression_quality = int(os.getenv('SCREENSHOT_COMPRESSION_QUALITY', '95'))
 
         # Qwen vision model configuration
         self.qwen_model_name = "Qwen/Qwen2.5-VL-32B-Instruct"
