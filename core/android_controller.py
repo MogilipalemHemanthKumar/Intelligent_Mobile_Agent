@@ -142,7 +142,6 @@ class AndroidController:
 
     def launch_application(self, app_package_name: str) -> bool:
         """Launch application by package name"""
-        print(f"Launching application: {app_package_name}")
 
         try:
             # Force stop application for clean start
@@ -153,8 +152,6 @@ class AndroidController:
             launch_result = self.run_adb_command(['shell', 'monkey', '-p', app_package_name, '-c',
                                                'android.intent.category.LAUNCHER', '1'])
             time.sleep(5)  # Wait for app to load
-
-            print(f"Application launch completed")
             return True
         except Exception as e:
             print(f"Failed to launch application: {e}")
