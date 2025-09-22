@@ -165,14 +165,6 @@ print(result)
 | **Food Delivery** | `"Order biryani from Zomato for Koramangala delivery"` |
 | **Transportation** | `"Check Ola cab availability to Indiranagar"` |
 
-### Configuration Options
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `MAXIMUM_EXECUTION_STEPS` | 15 | Max steps per task |
-| `MAXIMUM_ACTION_REPETITIONS` | 2 | Loop prevention threshold |
-| `SCREENSHOT_COMPRESSION_QUALITY` | 85 | Image quality (1-100) |
-| `DEBUG_LOGGING_ENABLED` | false | Detailed logging |
 
 ## 🔧 Advanced Features
 
