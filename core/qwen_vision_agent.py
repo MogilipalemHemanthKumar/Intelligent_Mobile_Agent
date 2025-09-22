@@ -159,13 +159,12 @@ class QwenVisionAgent:
 
         if not search_initiated:
             return task_header + """
-CRITICAL: Respond with ONLY ONE action line in the exact format shown below.
+ESSENTIAL: Give ONLY ONE command from the list below.
+Spot the search bar or search icon on this screen.
 
-Locate the search bar or search icon on this screen.
-
-RESPOND WITH EXACTLY ONE OF THESE:
+CHOOSE EXACTLY ONE:
 TAP (x,y) # Search bar
-TAP (x,y) # Search icon  
+TAP (x,y) # Search icon
 SCROLL down # to find search
 
 Do NOT provide explanations. Only respond with the action line.
@@ -173,11 +172,10 @@ Do NOT provide explanations. Only respond with the action line.
 
         elif not query_entered:
             return task_header + """
-CRITICAL: Respond with ONLY ONE action line in the exact format shown below.
+ESSENTIAL: Give ONLY ONE command from the list below.
+Spot the search bar or search icon on this screen.
 
-Look for a text input field or search box where you can type.
-
-RESPOND WITH EXACTLY ONE OF THESE:
+CHOOSE EXACTLY ONE:
 TYPE 'headphones under 1000' # search query
 TAP (x,y) # search input field
 SCROLL down # to find input
@@ -187,11 +185,10 @@ Do NOT provide explanations. Only respond with the action line.
 
         else:
             return task_header + """
-CRITICAL: Respond with ONLY ONE action line in the exact format shown below.
+ESSENTIAL: Give ONLY ONE command from the list below.
+Spot the search bar or search icon on this screen.
 
-Look for search results or product filters.
-
-RESPOND WITH EXACTLY ONE OF THESE:
+CHOOSE EXACTLY ONE:
 TAP (x,y) # product or filter
 SCROLL down # see more results
 TASK_COMPLETE: Found relevant products
