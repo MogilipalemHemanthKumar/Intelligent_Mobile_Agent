@@ -21,7 +21,6 @@ def load_environment_variables(env_file_path: str = '.env') -> None:
                 if config_line and not config_line.startswith('#') and '=' in config_line:
                     config_key, config_value = config_line.split('=', 1)
                     os.environ[config_key.strip()] = config_value.strip()
-        print(f"Configuration loaded from {env_file_path}")
     except Exception as e:
         print(f"Error loading configuration from {env_file_path}: {e}")
 
@@ -65,8 +64,6 @@ class AgentConfiguration:
         if self.maximum_steps < 1 or self.maximum_steps > 50:
             print("MAXIMUM_EXECUTION_STEPS should be between 1 and 50")
             return False
-
-        print("Agent configuration validated successfully")
         return True
 
     def display_configuration_summary(self) -> None:
