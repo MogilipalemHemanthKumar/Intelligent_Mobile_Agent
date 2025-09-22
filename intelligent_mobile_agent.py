@@ -33,9 +33,9 @@ class IntelligentMobileAgent:
         self.qwen_vision_agent = QwenVisionAgent(api_token=self.agent_config.huggingface_api_token)
         self.ui_element_parser = UIElementParser()
         self.action_coordinator = ActionCoordinator(self.android_controller)
-        
+        print("#" * 60)
         print("Intelligent Mobile Agent with Qwen Vision Ready!")
-    
+        print("#" * 60)
     def capture_device_state(self) -> Tuple[str, str]:
         """Capture current device screen and UI hierarchy"""
         self.execution_state.advance_step_counter()
@@ -53,8 +53,8 @@ class IntelligentMobileAgent:
     
     def execute_task_instruction(self, task_instruction: str) -> str:
         """Execute mobile automation task based on natural language instruction"""
-        print(f"\nStarting task execution: {task_instruction}")
-        print("=" * 60)
+        print(f"\nTask: {task_instruction}")
+       
         
         # Initialize task execution state
         self.execution_state.initialize_new_task(task_instruction)
@@ -62,7 +62,6 @@ class IntelligentMobileAgent:
         
         # Identify and launch target application
         app_identifier = AppUtilities.extract_app_identifier(task_instruction)
-        print(f"📱 Target application: {app_identifier}")
         
         if app_identifier != "unknown":
             app_package_name = AppUtilities.get_app_package_name(app_identifier)
@@ -109,7 +108,7 @@ class IntelligentMobileAgent:
                     if action_to_execute:
                         # Update execution progress
                         self.execution_state.update_task_progress(action_to_execute)
-                        print(f"Qwen Vision suggests: {action_to_execute}")
+                        print(f"Action Executed: {action_to_execute}")
             
             # Secondary: Fallback to UI hierarchy analysis
             if not action_to_execute and ui_hierarchy_path:
@@ -153,7 +152,7 @@ class IntelligentMobileAgent:
             final_execution_result = f"Task execution completed after {self.execution_state.current_step_number} steps. Search initiated: {self.execution_state.search_initiated}, Query entered: {self.execution_state.query_entered}"
         
         print(f"\nFinal execution result: {final_execution_result}")
-        print("=" * 60)
+        print("#" * 60)
         return final_execution_result
 
 
