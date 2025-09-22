@@ -22,7 +22,6 @@ class AndroidController:
                 raise Exception("No Android devices detected. Please connect your device and enable USB debugging.")
 
             self.target_device_id = available_devices[0]
-            print(f"Connected to device: {self.target_device_id}")
 
             # Verify UIAutomator functionality
             self._verify_uiautomator()
@@ -35,7 +34,7 @@ class AndroidController:
         try:
             test_result = self.run_adb_command(['shell', 'uiautomator', 'dump', '/sdcard/ui_test.xml'])
             if 'UI hierchary dumped' in test_result or 'dumped' in test_result.lower():
-                print(" UIAutomator service operational")
+                pass
             else:
                 print("UIAutomator service may have issues")
         except:
